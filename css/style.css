@@ -5,6 +5,7 @@
   --secondary-bcg-color: #2f303a;
   --white-text-color: #ffffff;
   --primary-bcg-button: #f5f4fa;
+  --button-hero-hover-color: #188ce8;
   --footer-adress-link-color: rgba(255, 255, 255, 0.6);
   --border-primary-color: #eeeeee;
   --border-secondary-color: #ececec;
@@ -137,8 +138,13 @@ ul {
 }
 /* Hero */
 .hero-section {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 200px 0;
   background-color: var(--secondary-bcg-color);
+  background-image: url('../images/Hero.jpg');
   text-align: center;
 }
 .hero-title {
@@ -158,6 +164,8 @@ ul {
 }
 .hero-button {
   padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
 
   color: var(--white-text-color);
   background-color: var(--accent-color);
@@ -169,6 +177,11 @@ ul {
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--button-hero-hover-color);
 }
 
 /* Works */
@@ -202,6 +215,9 @@ ul {
   margin-left: 30px;
 
   background-color: var(--white-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-description {
   padding-top: 30px;
@@ -334,6 +350,28 @@ ul {
 .benefits-item {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
+}
+.benefits-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--primary-bcg-button);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.benefits-item:nth-child(2)::before {
+  background-image: url(../images/clock\ 1-2.svg);
+}
+.benefits-item:nth-child(1)::before {
+  background-image: url(../images/antenna\ 1-2.svg);
+}
+.benefits-item:nth-child(3)::before {
+  background-image: url(../images/diagram\ 1.svg);
+}
+.benefits-item:nth-child(4)::before {
+  background-image: url(../images/astronaut\ 1.svg);
 }
 .benefits-title {
   margin-top: 0;
