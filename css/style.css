@@ -104,10 +104,10 @@ ul {
 }
 
 .nav-icon {
-  width: 16px;
-  height: 12px;
+  fill: currentColor;
   margin-right: 10px;
 }
+
 .phone-icon {
   width: 10px;
   height: 16px;
@@ -141,12 +141,14 @@ ul {
   margin-right: 50px;
 }
 .auth-link {
+  display: flex;
   text-decoration: none;
   color: var(--secodary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  align-items: center;
 }
 .auth-link:hover,
 .auth-link:focus,
@@ -154,9 +156,7 @@ ul {
 .footer-auth-link:focus {
   color: var(--accent-color);
 }
-.nav-icon {
-  fill: currentColor;
-}
+
 /* Hero */
 .hero-section {
   max-width: 1600px;
@@ -167,6 +167,9 @@ ul {
   background-color: var(--secondary-bcg-color);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/Hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   text-align: center;
 }
 .hero-title {
@@ -373,10 +376,11 @@ ul {
   margin-left: 30px;
 }
 .project-item {
+  display: block;
   text-decoration: none;
 }
-.project-list:hover,
-.project-list:focus {
+.project-item:hover,
+.project-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
